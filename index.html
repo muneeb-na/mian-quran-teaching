@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QURANteaching.online</title>
+  <link rel="icon" href="10.04.2025_22.56.06_REC.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    #data {
+      text-align: center;
+      margin-top: 40px;
+      color: green;
+      animation: UPTODOWN 1.5s ease-in-out;
+      padding: 0 15px;
+    }
+
+    #data p {
+      font-size: 1.2rem;
+    }
+
+    @keyframes UPTODOWN {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(0); }
+    }
+
+    #information {
+      margin-top: 60px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: green;
+      gap: 20px;
+    }
+
+    #name {
+      font-size: 28px;
+      text-align: center;
+      margin-left: 0%;
+      animation: UPTODOWN 1.5s ease-in-out;
+    }
+
+    #im {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      animation: righttoleft 1s ease-in-out;
+    }
+
+    @keyframes righttoleft {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(0); }
+    }
+
+    h3 {
+      text-align: center;
+      color: green;
+      margin-top: 50px;
+      font-size: 28px;
+    }
+
+    ul {
+      margin: 20px auto;
+      font-size: 18px;
+      max-width: 90%;
+      line-height: 1.6;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    #para {
+      font-size: 32px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    /* Tablet */
+    @media (min-width: 768px) {
+      #information {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      #name {
+        font-size: 36px;
+        text-align: left;
+        max-width: 50%;
+      }
+
+      #img {
+        width: 300px;
+        height: 300px;
+      }
+
+      h3 {
+        font-size: 32px;
+      }
+
+      #para {
+        font-size: 36px;
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 1024px) {
+      #img {
+        width: 400px;
+        height: 400px;
+      }
+
+      #name {
+        font-size: 42px;
+      }
+
+      h3 {
+        font-size: 35px;
+      }
+
+      #para {
+        font-size: 40px;
+      }
+    }
+
+    #contactus {
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    #contactus h3 {
+      margin-bottom: 20px;
+    }
+
+    #button {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: white;
+      padding: 14px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 114, 255, 0.3);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    #button:hover {
+      background: linear-gradient(135deg, #0072ff, #00c6ff);
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 114, 255, 0.4);
+    }
+
+    #experince {
+      position: relative;
+      left: -100px;
+      opacity: 0;
+      transition: all 0.6s ease-in-out;
+    }
+
+    #footter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 20px;
+      color: green;
+      background-color: aqua;
+      height: 150px;
+      width: 100%;
+      position: relative;
+    }
+
+    .contact-links {
+      margin-top: 10px;
+    }
+
+    .contact-links a {
+      margin: 0 15px;
+      color: green;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .contact-links a:hover {
+      color: #0072ff;
+    }
+    #whatsapp {
+      width: 30px;
+      height: 30px;
+    }
+    #whatsapp:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease;
+    }
+    #loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+.arabicText {
+  font-size: 36px;
+  color: green;
+  font-family: 'Amiri', serif;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+  </style>
+</head>
+<body>
+  <div id="data">
+    <h1>QURAN Teaching Online</h1>
+    <p>Easy and cheap</p>
+  </div>
+
+  <div id="information">
+    <h1 id="name">Hafiz <strong>MUHAMMAD</strong> Sadiq</h1>
+    <img id="im" src="IMG-20250410-WA0005.jpg" alt="Hafiz MUHAMMAD Sadiq">
+  </div>
+
+  <div id="OURSERVICES">
+    <h3>Our Features</h3>
+    <ul>
+      <li>30 minutes free class</li>
+      <li>Easy payment methods</li>
+      <li>All common platforms for video call like Google Meet, Zoom, even WhatsApp</li>
+    </ul>
+  </div>
+  <div id="experince">
+    <h3>Experience</h3>
+    <p id="para">10 years+</p>
+  </div>
+  <div id="contactus">
+    <h3>Contact Us</h3>
+    <button id="button" onclick="window.open('contactus.html', '_blank')">
+      Contact us!!
+    </button>
+  </div>
+<div id="loader">
+  <div class="arabicText">بِسْمِ ٱللّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+</div>
+
+
+  <footer id="footter">
+    <p>&copy; 2025 QURAN Teaching Online</p>
+    <div class="contact-links">
+      <a href="mailto:muneebn350@gmail.com"  onclick="window.location.href='email.html'" ><img id="whatsapp" src="email.png"></a>
+      <a href="https://wa.me/923164942542" target="_blank"><img id="whatsapp" src="whatsapp.png"></a>
+    </div>
+  </footer>
+
+  <script>
+    
+    window.addEventListener('scroll', () => {
+      const section = document.querySelector('#experince');
+      const sectionPosition = section.getBoundingClientRect().top;
+      const triggerpoint = window.innerHeight - 100;
+
+      if (sectionPosition < triggerpoint) {
+        section.style.left = '0px';
+        section.style.opacity = '1';
+      }
+    });
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    setTimeout(() => {
+      loader.style.opacity = '0';
+      setTimeout(() => loader.style.display = 'none', 1000);
+    }, 2500); // stays for 2.5 seconds
+  });
+  </script>
+</body>
+</html>
