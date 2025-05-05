@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Blocked - Payment Required</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .blocked-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 3px solid #ff0000;
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #ff0000;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+        }
+
+        p {
+            color: #ffffff;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .warning {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin: 20px 0;
+        }
+
+        .contact {
+            color: #cccccc;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .blocked-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .warning {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blocked-container">
+        <h1>Account Blocked!</h1>
+        <p>Dear Account Holder,</p>
+        <p>Your access has been restricted due to non-payment of outstanding development charges.</p>
+        <p class="warning">⚠️ Outstanding payments must be cleared to restore access ⚠️</p>
+        <hr style="margin: 20px 0; border-color: #ff0000;">
+        <div class="contact">
+            <p>Contact developer for payment instructions:</p>
+            <p>Email: muneebn350@gmail.com</p>
+        </div>
+    </div>
+</body>
+</html>
